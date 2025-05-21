@@ -3,7 +3,7 @@ import os
 
 FOLDER_NAME = "advancements"
 FOLDER_PATH = os.path.join(os.path.dirname(__file__), FOLDER_NAME)
-MOD_ID = input("please tell me your the modid of your mod.\n")
+MOD_ID = ""
 
 def load_all_json_from_folder(folder_path: str) -> dict[str, dict]:
     """
@@ -33,6 +33,7 @@ if __name__ == '__main__':
         print("Please put your advancement jsons in this " + '"' + FOLDER_NAME + '"' + " folder.")
 
     else:
+        MOD_ID = input("please tell me your the modid of your mod.\n")
         loaded: dict[str, dict] = load_all_json_from_folder(FOLDER_PATH)
 
         result_dict: dict[str, dict] = {}
