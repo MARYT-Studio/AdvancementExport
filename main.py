@@ -27,7 +27,6 @@ def load_all_json_from_folder(folder_path: str) -> dict[str, dict]:
     return result
 
 
-# 按装订区域中的绿色按钮以运行脚本。
 if __name__ == '__main__':
     if not os.path.exists(FOLDER_PATH):
         os.makedirs(FOLDER_PATH)
